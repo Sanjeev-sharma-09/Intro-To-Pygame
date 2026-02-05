@@ -14,7 +14,7 @@ background_surface= pygame.image.load("graphics/background.jpg")
 background_surface= pygame.transform.smoothscale(background_surface, (800, 500))
 
 text_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 70)
-text_surface= text_font.render("Intro To Animation", True, "black")
+text_surface= text_font.render("Intro To Collision", True, "black")
 
 dog_x_pos= 80 #Moving it to right 
 
