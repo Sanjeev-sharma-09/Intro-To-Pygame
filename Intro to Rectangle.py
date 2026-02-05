@@ -36,6 +36,11 @@ cat_surface= pygame.transform.smoothscale(cat_surface, (240, 150)).convert_alpha
 cat_surface_rect= cat_surface.get_rect() #We can specify its where it should be placed.. but for me, already have made all the adjustment from
                                          #hard coding..
 
+#Future me-
+#This .get_rect() with no argument put the top left of rectangle at (0, 0) of screen .. so when we will collide objects if not specified 
+#The code will interpret it as colliding because the rectangle's top left are placed at (0, 0)
+#This code doesn't require specifying but in collision it will be needed
+
 text_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 70)
 text_surface= text_font.render("Intro To Animation", True, "black")
 
