@@ -42,7 +42,7 @@ cat_surface_rect= cat_surface.get_rect() #We can specify its where it should be 
 #This code doesn't require specifying but in collision it will be needed
 
 text_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 70)
-text_surface= text_font.render("Intro To Animation", True, "black")
+text_surface= text_font.render("Intro To Rectangle", True, "black")
 
 dog_text_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 30)
 dog_text_surface= dog_text_font.render("Dogesh Bhai", True, "black")
