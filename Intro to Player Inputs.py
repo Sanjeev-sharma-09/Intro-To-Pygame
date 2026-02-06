@@ -52,7 +52,8 @@ while True:
         #Checking for the keyboard inputs
         if event.type== pygame.KEYDOWN: #This check if any key was pressed or not 
             if event.key== pygame.K_SPACE:
-                dog_gravity= -20 #This here create a way that looks like the dog is jumping
+                if dog_surface_rect.bottom== 425:
+                    dog_gravity= -20 #This here create a way that looks like the dog is jumping
                 
         
     
