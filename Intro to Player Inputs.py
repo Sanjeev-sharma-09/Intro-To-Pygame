@@ -54,10 +54,8 @@ while True:
             if event.key== pygame.K_SPACE:
                 if dog_surface_rect.bottom== 425:
                     dog_gravity= -20 #This here create a way that looks like the dog is jumping
-                
+                        
         
-    
-
     #To access the keys we use and we store it in a dictionary to access specific keys 
     # keys= pygame.key.get_pressed() #This will check which key is pressed 
     # if keys[pygame.K_SPACE]: #This is here for space
@@ -75,18 +73,11 @@ while True:
     dog_surface_rect.y+= dog_gravity
     if dog_surface_rect.bottom> 425: dog_surface_rect.bottom= 425
     
-    
-    
-    
-    
     cat_surface_rect.x -= 8
     if cat_surface_rect.right < 0: 
         cat_surface_rect.left = 800
     screen.blit(cat_surface, cat_surface_rect)
     screen.blit(cat_text_surface, (cat_surface_rect.x+ 85, cat_surface_rect.y- 10))
-
-    
-
 
     pygame.display.update() 
     clock.tick(45)
