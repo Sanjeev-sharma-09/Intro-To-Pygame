@@ -6,7 +6,7 @@ from sys import exit
 import pygame
 
 pygame.init()
-game_active= True
+game_active= False
 
 screen= pygame.display.set_mode((800, 500))
 clock= pygame.time.Clock() 
@@ -18,7 +18,12 @@ floor_rect= pygame.Rect(0, 405, 800, 95)
 
 text_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 70)
 text_surface= text_font.render("Intro To Pygame", True, "black")
-score_font= pygame.font.SysFont("Arial", 40)
+score_font= pygame.font.SysFont("Arial", 40) #Creating a different font for score
+
+#Instructions font
+instruct_font= pygame.font.Font("fonts/SanjeevsFont-Regular.ttf", 50)
+instruct_surface= instruct_font.render("Press Space to Play", True, "black")
+
 
 dog_surface= pygame.image.load("graphics/dog-pixel.png") 
 dog_surface= pygame.transform.smoothscale(dog_surface, (100, 100)).convert_alpha() 
@@ -29,7 +34,6 @@ dog_text_surface= dog_text_font.render("Dogesh Bhai", True, "black")
 #Creating dog gravity to make it fall downwards when jumping
 dog_gravity= 0
 
- 
 cat_surface= pygame.image.load("graphics/cat-pixel.png")
 cat_surface= pygame.transform.smoothscale(cat_surface, (240, 150)).convert_alpha() 
 cat_surface_rect= cat_surface.get_rect(topleft = (1000, 272)) 
@@ -72,12 +76,11 @@ while True:
                 start_time= int(pygame.time.get_ticks()/ 1000)
 
             
-
     if game_active: #This if statements check if the game is active or not. Now instead of exiting the game, we can restart it when the objects
                     #collide with this single variable game_active
         screen.blit(background_surface, (0, 0)) 
         screen.blit(text_surface, (120, 20))
-        display_score()
+        display_score() #Calling the display_score function
 
         screen.blit(dog_text_surface, (dog_surface_rect.x- 30, dog_surface_rect.y- 20))
         screen.blit(dog_surface, dog_surface_rect) 
@@ -105,7 +108,11 @@ while True:
     
     else:
         screen.fill("red") #If they collides the screen will be filled with red
-    
+        screen.blit(instruct_surface, (180, 400))
+        
+        screen.blit(text_surface, (160, 40))
+        screen.blit(dog_surface, (200, 300)) 
+        screen.blit(cat_surface, (300, 250))
     
     pygame.display.update() 
     clock.tick(45)
