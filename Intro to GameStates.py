@@ -108,6 +108,7 @@ while True:
     
     else:
         screen.fill("red") #If they collides the screen will be filled with red
+
         screen.blit(instruct_surface, (180, 400))
         
         screen.blit(text_surface, (160, 40))
