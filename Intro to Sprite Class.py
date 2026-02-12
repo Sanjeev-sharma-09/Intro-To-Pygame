@@ -164,3 +164,6 @@ while True:
     
     pygame.display.update() 
     clock.tick(45)
+
+    #Here the collision logic is broken and the code is still not clean.. So if you want to try to fix this, be my guest..
+    #Also here is the link of the tutorial i followed along - https://www.youtube.com/watch?v=AY9MnQ4x3zk&t=306s

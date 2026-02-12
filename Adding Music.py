@@ -53,7 +53,7 @@ game_active= False
 
 bg_sound= pygame.mixer.Sound("music/Background Music.mp3")
 bg_sound.set_volume(0.1)
-bg_sound.play()
+bg_sound.play() # .play(loops= 2) this will loop the sounds 2 times. If we add -1 it will loop forever
 
 screen= pygame.display.set_mode((800, 500))
 clock= pygame.time.Clock() 
